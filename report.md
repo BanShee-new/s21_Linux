@@ -9,105 +9,125 @@
 
 2.1. Создать пользователя 
 - `sudo adduser username`
-Р2.1
+  
+![Создание пользователя](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P2.1.png)
+
 2.2. Пользователь добавлен в группу adm
 - `sudo usermod -a -G groupname username`
 - `cat /etc/passwd`
-Р2.2
+- 
+![Добавление пользователя в группу](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P2.2.png)
 
 ## Part 3. Настройка сети ОС
 
 3.1.Задать имя машины вида user-1:
 - `sudo hostname user-1`
 - `sudo hostname`
-P3.1
+
+![Имя машины](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P3.1.png)
 
 3.2.Установить временную зону, соответствующую текущему местоположению, и вывести информации о времени:
 - `sudo timedatectl set-timezone Europe/Moscow`
-P3.2
+
+![Временная зона](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P3.2.png)
 
 3.3.Установить набор сетевых интерфейсов:
 - `sudo apt install net-tools`
-P3.3
+
+![Набор сетевых интерфейсов](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P3.3.png)
 
 Вывести информацию о сетевых интерфейсах:
 - `ifconfig`
-P3.4
 
-lo (loopback device) - виртуальный интерфейс, присутствующий по умолчанию в любом Linux. Он используется для отладки сетевых программ и запуска серверных приложений на локальной машине. С этим интерфейсом всегда связан адрес 127.0.0.1. У него есть dns-имя – localhost.
+![Сетевые интерфейсы](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P3.4.png)
+
+*lo (loopback device)* - виртуальный интерфейс, присутствующий по умолчанию в любом Linux. Он используется для отладки сетевых программ и запуска серверных приложений на локальной машине. С этим интерфейсом всегда связан адрес 127.0.0.1. У него есть dns-имя – *localhost*.
 
 3.5. Получить ip-адрес устройства от DHCP сервера
 - `sudo dhclient -v`
-P3.5
-ip адрес устройства указан после bound to
 
-DHCP (Dynamic Host Configuration Protocol) — это сетевой протокол, позволяющий сетевым устройствам автоматически получать IP-адрес и другие параметры, необходимые для работы в сети TCP/IP.
+![IP-адрес](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P3.5.png)
+
+ip адрес устройства указан после *bound to*
+
+*DHCP (Dynamic Host Configuration Protocol)* — это сетевой протокол, позволяющий сетевым устройствам автоматически получать IP-адрес и другие параметры, необходимые для работы в сети TCP/IP.
 
 3.6. Получить внешний ip-адрес
 - `curl ifconfig.me/ip`
-P3.6
+
+![Внешний IP-адрес](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P3.6.png)
 
 3.7. Получить внутренний IP-адрес шлюза, он же ip-адрес по умолчанию (gw)
 - `ip rout`
-P3.7
+
+![IP-адрес шлюза](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P3.7.png)
 
 3.8. Задать статичные настройки ip, gw, dns
 - `sudo vim /etc/netplan/00-installer-config.yaml`
 
-Основные настройки:
-addresses — ip адрес который будет назначен вашей сетевой карте.
-gateway4 — ip адрес вашего роутера.
-nameservers — DNS сервера. Первый - наш роутер.
-search — домен в котором будет произведен поиск. Домен можно настроить при помощи DNS сервера
+**Основные настройки:**
+*addresses* — ip адрес который будет назначен вашей сетевой карте.
+*gateway4* — ip адрес вашего роутера.
+*nameservers* — DNS сервера. Первый - наш роутер.
+*search* — домен в котором будет произведен поиск. Домен можно настроить при помощи DNS сервера
 
-P3.8
+![Статичные настройки](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P3.8.png)
 
 3.9. Применить изменения в netplan и перезагрузиться
 - `sudo netplan apply`
 - `reboot`
-P3.9
+
+![Применение изменений и перезагрузка](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P3.9.png)
 
 3.10. Проверить соответствия адресов адресам, указанным в предыдущем пункте
 - `ifconfig`
-P3.10
+
+![Проверка адресов](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P3.10.png)
 
 3.11.Пропинговать удаленные хосты 1.1.1.1 и ya.ru
 - `ping 1.1.1.1`
 - `ping ya.ry`
-P3.11
+
+![Пингование хостов](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P3.11.png)
 
 ## Part 4. Обновление ОС
 
 4.1. Обновить системные пакеты до последней на момент выполнения задания версии
 - `sudo apt-get upgrade`
-P4.1
+
+![Обновление системы](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P4.1.png)
 
 ## Part 5. Использование команды sudo
 
-5.1.sudo - позволяет временно поднимать привилегии и выполнять команды администрирования с максимальными правамии.
+5.1.*sudo* - позволяет временно поднимать привилегии и выполнять команды администрирования с максимальными правамии.
 
 5.2. Разрешить пользователю, созданному в Part 2, выполнять команду sudo.
 - `sudo usermod -aG sudo "пользователь 2"`
+
+![Полномочия пользователя](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P5.2.png)
 
 5.3. Поменять hostname ОС от имени пользователя, созданного в пункте Part 2 (используя sudo).
 - `su "пользователь 2"`
 - `hostname` (проверяем hostname ОС)
 - `sudo hostname "новое hostname"`
 - `hostname` (проверяем, что hostname изменилось)
-Р5.3
+
+![Изменение имени хоста](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P5.3.png)
 
 ## Part 6. Установка и настройка службы времени
 
 6.1. Вывести время, часового пояса, в котором вы сейчас находитесь
 - `date`
-P6.1
+
+![Время](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P6.1.png)
 
 6.2. Вывод следующей команды должен содержать NTPSynchronized=yes
 - `timedatectl show`
-P6.2
+
+![Вывод команды](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P6.2.png)
 
 ## Part 7. Установка и использование текстовых редакторов
-Используя каждый из трех выбранных редакторов, создайте файл test_X.txt, где X -- название редактора, в котором создан файл. Напишите в нём свой никнейм, закройте файл с сохранением изменений.
+Используя каждый из трех выбранных редакторов, создайте файл *test_X.txt*, где X -- название редактора, в котором создан файл. Напишите в нём свой никнейм, закройте файл с сохранением изменений.
 
 7.1. Текстовый редактор VIM - поставляется с ОС:
 - `vim` - открыть редактор vim
@@ -115,20 +135,25 @@ P6.2
 - Esc - выход из режима вставки
 - :w "имя файла" - сохранить файл с заданным именем
 - :q - выйти из редактора vim
-P7.1
+
+![VIM](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P7.1.png)
 
 7.2. Текстовый редактор NANO - поставляется с ОС:
 - `nano` - ткрыть редактор nano
 - Ctrl + О - сохранить изменения, затем ввести имя файла
 - Ctrl + Х - выйти из редактора NANO
-P7.2
+
+![NANO](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P7.2.png)
 
 7.3. Текстовый редактор JOE: 
 - `sudo apt update`
 - `sudo apt install joe`
-P7.3.1
+
+![Установка JOE](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P7.3.1.png)
+
 - Ctrl + K + X - сохранить изменения, ввести имя файла и выйти из редактора JOE
-P7.3.2
+
+![JOE](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P7.3.2.png)
 
 7.4. Используя каждый из трех выбранных редакторов, откройте файл на редактирование, отредактируйте файл, заменив никнейм на строку "21 School 21", закройте файл без сохранения изменений.
 
@@ -136,16 +161,20 @@ P7.3.2
 - `vim test_vim.txt`
 - i - войти в режим вставки, заменить никнейм на "21 School 21"
 - для закрытия файла без изменений войти в стандартный режим (ESC) и прописать :q!
-P7.4.1
+
+![VIM вставка](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P7.4.1.png)
 
 7.4.2 NANO
 - `nano test_nano.txt`
 - для закрытия файла без изменений Ctrl + X -> N
-Р7.4.2
+
+![NANO вставка](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P7.4.2.png)
 
 7.4.3 JOE
 - `joe test_joe.txt`
 - для закрытия файла без изменений Ctrl + C -> Y
+
+![JOE вставка](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P7.4.3.png)
 
 7.5. Используя каждый из трех выбранных редакторов, отредактируйте файл ещё раз (по аналогии с предыдущим пунктом), а затем освойте функции поиска по содержимому файла (слово) и замены слова на любое другое.
 
