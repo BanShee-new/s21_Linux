@@ -395,7 +395,7 @@ P10.1
 
 2. `/var/log/syslog`
 
-![Изображение](https://github.com/BanShee-new/s21_Linux/blob/dfe83443d0b85df906409351aff7a04fb62dc3af/screenshots/P14.1.2.png "Журнал /var/log/syslog")
+![Изображение](https://github.com/BanShee-new/s21_Linux/blob/a387a6fc093bd194e0515cfa737b3189de703c84/screenshots/P14.1.2.png "Журнал /var/log/syslog")
 
 3. `/var/log/auth.log`
 
