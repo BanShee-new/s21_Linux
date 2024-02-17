@@ -225,7 +225,7 @@ ip адрес устройства указан после *bound to*
 - Открыть файл конфигурации: `sudo vim /etc/ssh/sshd_config`
 - Изменить порт на 2022:
 
-![Версия Ubuntu](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P8.3.png)
+![Порт 2022](https://github.com/BanShee-new/s21_Linux/blob/5bd35efc3fe929b84f3b71ab26f2f2b51ffa41da/screenshots/P8.3.png)
 
 8.4. Используя команду ps, показать наличие процесса sshd: `ps -ef | grep sshd`
 
