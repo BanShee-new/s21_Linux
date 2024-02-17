@@ -3,7 +3,7 @@
 ## 1.1. Узнайте версию Ubuntu, выполнив команду
 - `cat /etc/issue`
 
-![Версия Ubuntu](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P1.png)
+![Изображение](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P1.png "Версия Ubuntu")
 
 ## Part 2. Создание пользователя
 
