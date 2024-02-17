@@ -395,11 +395,11 @@ P10.1
 
 2. `/var/log/syslog`
 
-![Изображение](https://github.com/BanShee-new/s21_Linux/screenshots/P14.1.2.png "Журнал /var/log/syslog")
+![Изображение](https://github.com/BanShee-new/s21_Linux/blob/dfe83443d0b85df906409351aff7a04fb62dc3af/screenshots/P14.1.2.png "Журнал /var/log/syslog")
 
 3. `/var/log/auth.log`
 
-![Изображение](https://github.com/BanShee-new/s21_Linux/screenshots/P14.1.3.png "Журнал /var/log/auth.log")
+![Изображение](https://github.com/BanShee-new/s21_Linux/blob/dfe83443d0b85df906409351aff7a04fb62dc3af/screenshots/P14.1.3.png "Журнал /var/log/auth.log")
 
 14.2. Написать в отчёте время последней успешной авторизации, имя пользователя и метод входа в систему.
 
