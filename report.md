@@ -182,24 +182,34 @@ ip адрес устройства указан после *bound to*
 - `vim test_vim.txt`
 - i (режим вставки) отредактировать текст
 - Esc + /"текст для поиска"
-Р7.5.1.1
+
+![VIM поиск](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P7.5.1.1.png)
+
 - Esc + :s/"текст для замены"/"текст замены"
-Р7.5.1.2
+
+![VIM замена](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P7.5.1.2.png)
 
 7.5.2. Результат поиска слова в NANO:
 - `nano test_nano.txt`
 - отредактировать текст
 - Ctrl + W -> "текст для поиска"
-P7.5.2.1
+
+![NANO поиск](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P7.5.2.1.png)
+
 - Ctrl + \ -> "текст для замены" -> "текст замены" -> Y
-P7.5.2.2
+
+![NANO замена](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P7.5.2.2.png)
 
 7.5.3 Результат поиска слова в JOE:
 - `joe test_joe.txt`
 - отредактировать текст
 - Ctrl + K + F -> "текст для поиска" -> I
-P7.5.3.1
+
+![JOE поиск](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P7.5.3.1.png)
+
 - Ctrl + K + F -> "текст для замены" -> R -> "текст замены" -> Y
+
+![JOE вставка](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P7.5.3.2.png)
 
 ## Part 8. Установка и базовая настройка сервиса SSHD
 
@@ -214,43 +224,45 @@ P7.5.3.1
 - Перед модификацией конфигурационного файла создать резеврную копию: `sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.factory-defaults`
 - Открыть файл конфигурации: `sudo vim /etc/ssh/sshd_config`
 - Изменить порт на 2022:
-P8.2
 
-8.4. Используя команду ps, показать наличие процесса sshd:
-`ps -ef | grep sshd`
+![Версия Ubuntu](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P8.3.png)
 
-ps - выводит список текущих процессов
--e - выбрать все процессы
--f - показывает полную информацию
-grep ssh - вывод процессов, которые содержат строку ssh
-ps -ef | grep sshd - показывает полную информацию по процессам, содержащим строку sshd
-P8.4
+8.4. Используя команду ps, показать наличие процесса sshd: `ps -ef | grep sshd`
 
-8.5. Перезагрузить систему.
-- `sudo reboot`
+*ps* - выводит список текущих процессов
+*-e* - выбрать все процессы
+*-f* - показывает полную информацию
+*grep ssh* - вывод процессов, которые содержат строку ssh
+*ps -ef | grep sshd* - показывает полную информацию по процессам, содержащим строку sshd
+
+![Процесс sshd](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P8.4.png)
+
+8.5. Перезагрузить систему: `sudo reboot`
 
 8.6. Вывод команды netstat -tan:
-P8.6
 
--t - отображать TCP подключения
--a - показать состояние всех сокетов
--n - показывать сетевые адреса как числа
-Proto - Содержит тип протокола
-Recv-Q - Счётчик байтов не скопированных программой пользователя из этого сокета.
-Send-Q - Счётчик байтов, не подтверждённых удалённым узлом.
-Local Address - Адрес и номер порта локального конца сокета.
-Foreign Address - Адрес и номер порта удалённого конца сокета.
-State - Состояние сокета.
-LISTEN Сокет ожидает входящих подключений.
-SYN_SENT Сокет, находящийся в режиме активной попытки установки подключения.
-0.0.0.0 - это немаршрутизируемый адрес IPv4, который используется в качестве адреса по умолчанию или адреса-заполнителя
+![Вывод команды netstat -tan](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P8.6.png)
+
+*-t* - отображать TCP подключения
+*-a* - показать состояние всех сокетов
+*-n* - показывать сетевые адреса как числа
+*Proto* - Содержит тип протокола
+*Recv-Q* - Счётчик байтов не скопированных программой пользователя из этого сокета.
+*Send-Q* - Счётчик байтов, не подтверждённых удалённым узлом.
+*Local Address* - Адрес и номер порта локального конца сокета.
+*Foreign Address* - Адрес и номер порта удалённого конца сокета.
+*State* - Состояние сокета.
+*LISTEN* Сокет ожидает входящих подключений.
+*SYN_SENT* Сокет, находящийся в режиме активной попытки установки подключения.
+*0.0.0.0* - это немаршрутизируемый адрес IPv4, который используется в качестве адреса по умолчанию или адреса-заполнителя
 
 ## Part 9. Установка и использование утилит top, htop
 
 9.1. Установить и запустить утилиты top и htop.
 
 9.1.1. Утилита top является предустановлнной, для её запуска необходимо ввести команду `top`
-P9.1.1
+
+![Утилита top](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P9.1.1.png)
 
 9.1.2. По выводу команды top определить и написать в отчёте:
 - uptime: 12 min
@@ -270,19 +282,32 @@ P9.1.1
 
 В отчёт вставить скрин с выводом команды htop:
 - отсортированному по PID (F6 -> PID)
-Р9.2.1
+
+![Htop сортировка по PID](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P9.2.1.png)
+
 - отсортированному по PERCENT_CPU (F6 -> PERCENT_CPU)
-Р9.2.2
+
+![Htop сортировка по PERCENT_CPU](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P9.2.2.png)
+
 - отсортированному по PERCENT_MEM (F6 -> PERCENT_MEM)
-Р9.2.3
+
+![Htop сортировка по PERCENT_MEM](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P9.2.3.png)
+
 - отсортированному по TIME (F6 -> TIME)
-Р9.2.4
+
+![Htop сортировка по TIME](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P9.2.4.png)
+
 - отфильтрованному для процесса sshd (F4 -> sshd)
-Р9.2.5
+
+![Htop фильтр по sshd](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P9.2.5.png)
+
 - с процессом syslog, найденным, используя поиск (F3 -> syslog)
-P9.2.6
+
+![Htop с процессом syslog](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P9.2.6.png)
+
 - с добавленным выводом hostname, clock и uptime (F2 -> добавить hostname, clock и uptime в одну из колонок)
-P9.2.7
+
+![Htop с добавленным выводом](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P9.2.7.png)
 
 ## Part 10. Использование утилиты fdisk
 
