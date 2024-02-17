@@ -391,11 +391,11 @@ P10.1
 14.1. Открыть для просмотра (cat /var/log/...):
 1. `/var/log/dmesg` 
 
-![Изображение](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P14.1.1.png "Журнал /var/log/dmesg")
+![Изображение](https://github.com/BanShee-new/s21_Linux/blob/5353b7441c703743483745f2f64aef3183203c0c/screenshots/P14.1.1.png "Журнал /var/log/dmesg")
 
 2. `/var/log/syslog`
 
-![Изображение](https://github.com/BanShee-new/s21_Linux/blob/579c73faea7bb43f0e4aa061c899471659df6da3/screenshots/P14.1.2.png "Журнал /var/log/syslog")
+![Изображение](https://github.com/BanShee-new/s21_Linux/screenshots/P14.1.2.png "Журнал /var/log/syslog")
 
 3. `/var/log/auth.log`
 
