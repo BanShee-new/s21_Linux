@@ -403,12 +403,12 @@ P10.1
 
 14.2. Написать в отчёте время последней успешной авторизации, имя пользователя и метод входа в систему.
 
-![Изображение](https://github.com/BanShee-new/s21_Linux/screenshots/P14.2.png "Последняя авторизация")
+![Изображение](https://github.com/BanShee-new/s21_Linux/blob/207c175b6c7d630740310ea9029cf62a758ccb22/screenshots/14.2.png "Последняя авторизация")
 
 14.3. Перезапустить службу SSHd.
 Вставить в отчёт скрин с сообщением о рестарте службы (искать в логах).
 
-![Изображение](https://github.com/BanShee-new/s21_Linux/screenshots/P14.3.png "Рестарт службы SSHd")
+![Изображение](https://github.com/BanShee-new/s21_Linux/blob/207c175b6c7d630740310ea9029cf62a758ccb22/screenshots/14.3.png "Рестарт службы SSHd")
 
 ## Part 15. Использование планировщика заданий CRON
 
@@ -419,17 +419,17 @@ P10.1
 \* — оператор звездочки означает все допустимые значения. Если у есть символ звездочки в поле Минуты, это означает, что задача будет выполняться каждую минуту.
 / — оператор косой черты позволяет указать значения шага, которые можно использовать вместе с диапазонами. Вместо диапазона значений вы также можно использовать оператор звездочки.
 
-![Изображение](https://github.com/BanShee-new/s21_Linux/screenshots/P15.1.png "Редактирование журнала CRON")
+![Изображение](ttps://github.com/BanShee-new/s21_Linux/blob/207c175b6c7d630740310ea9029cf62a758ccb22/screenshots/P15.1.png "Редактирование журнала CRON")
 
 15.2. Найти в системных журналах строчки (минимум две в заданном временном диапазоне) о выполнении (в журнале /var/log/syslog)
 
-![Изображение](https://github.com/BanShee-new/s21_Linux/screenshots/P15.2.png "Выполнение uptime")
+![Изображение](ttps://github.com/BanShee-new/s21_Linux/blob/207c175b6c7d630740310ea9029cf62a758ccb22/screenshots/P15.2.png "Выполнение uptime")
 
 15.3. Вывести на экран список текущих заданий для CRON (`crontab -l`)
 
-![Изображение](https://github.com/BanShee-new/s21_Linux/screenshots/P15.3.png "Текущие задания CRON")
+![Изображение](ttps://github.com/BanShee-new/s21_Linux/blob/207c175b6c7d630740310ea9029cf62a758ccb22/screenshots/P15.3.png "Текущие задания CRON")
 
 15.4. Удалите все задания из планировщика заданий команда `crontab -r` удаляет файл crontab целиком
 В отчёт вставьте скрин со списком текущих заданий для CRON (`crontab -l`):
 
-![Изображение](https://github.com/BanShee-new/s21_Linux/screenshots/P15.4.png "Нет заданий CRON")
+![Изображение](ttps://github.com/BanShee-new/s21_Linux/blob/207c175b6c7d630740310ea9029cf62a758ccb22/screenshots/P15.4.png "Нет заданий CRON")
