@@ -419,17 +419,17 @@ P10.1
 \* — оператор звездочки означает все допустимые значения. Если у есть символ звездочки в поле Минуты, это означает, что задача будет выполняться каждую минуту.
 / — оператор косой черты позволяет указать значения шага, которые можно использовать вместе с диапазонами. Вместо диапазона значений вы также можно использовать оператор звездочки.
 
-![Изображение](ttps://github.com/BanShee-new/s21_Linux/blob/207c175b6c7d630740310ea9029cf62a758ccb22/screenshots/P15.1.png "Редактирование журнала CRON")
+![Изображение](https://github.com/BanShee-new/s21_Linux/blob/ef0e9fa1f497d8032bafafe87cc7ccf93c8f545f/screenshots/15.1.png "Редактирование журнала CRON")
 
 15.2. Найти в системных журналах строчки (минимум две в заданном временном диапазоне) о выполнении (в журнале /var/log/syslog)
 
-![Изображение](ttps://github.com/BanShee-new/s21_Linux/blob/207c175b6c7d630740310ea9029cf62a758ccb22/screenshots/P15.2.png "Выполнение uptime")
+![Изображение](https://github.com/BanShee-new/s21_Linux/blob/ef0e9fa1f497d8032bafafe87cc7ccf93c8f545f/screenshots/15.2.png "Выполнение uptime")
 
 15.3. Вывести на экран список текущих заданий для CRON (`crontab -l`)
 
-![Изображение](ttps://github.com/BanShee-new/s21_Linux/blob/207c175b6c7d630740310ea9029cf62a758ccb22/screenshots/P15.3.png "Текущие задания CRON")
+![Изображение](https://github.com/BanShee-new/s21_Linux/blob/ef0e9fa1f497d8032bafafe87cc7ccf93c8f545f/screenshots/P15.3.png "Текущие задания CRON")
 
 15.4. Удалите все задания из планировщика заданий команда `crontab -r` удаляет файл crontab целиком
 В отчёт вставьте скрин со списком текущих заданий для CRON (`crontab -l`):
 
-![Изображение](ttps://github.com/BanShee-new/s21_Linux/blob/207c175b6c7d630740310ea9029cf62a758ccb22/screenshots/P15.4.png "Нет заданий CRON")
+![Изображение](https://github.com/BanShee-new/s21_Linux/blob/ef0e9fa1f497d8032bafafe87cc7ccf93c8f545f/screenshots/P15.4.png "Нет заданий CRON")
