@@ -427,9 +427,9 @@ P10.1
 
 15.3. Вывести на экран список текущих заданий для CRON (`crontab -l`)
 
-![Изображение](https://github.com/BanShee-new/s21_Linux/blob/ef0e9fa1f497d8032bafafe87cc7ccf93c8f545f/screenshots/P15.3.png "Текущие задания CRON")
+![Изображение](https://github.com/BanShee-new/s21_Linux/blob/cb799981cf39b2dd1e81a1bd600232f8033017f7/screenshots/15.3.png "Текущие задания CRON")
 
 15.4. Удалите все задания из планировщика заданий команда `crontab -r` удаляет файл crontab целиком
 В отчёт вставьте скрин со списком текущих заданий для CRON (`crontab -l`):
 
-![Изображение](https://github.com/BanShee-new/s21_Linux/blob/ef0e9fa1f497d8032bafafe87cc7ccf93c8f545f/screenshots/P15.4.png "Нет заданий CRON")
+![Изображение](https://github.com/BanShee-new/s21_Linux/blob/cb799981cf39b2dd1e81a1bd600232f8033017f7/screenshots/15.4.png "Нет заданий CRON")
